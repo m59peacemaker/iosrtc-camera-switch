@@ -5,8 +5,12 @@ vid.muted = true;
 document.addEventListener("deviceready", function() {
   cordova.plugins.iosrtc.debug.enable('iosrtc*');
   cordova.plugins.iosrtc.registerGlobals();
-  document.getElementById('one').addEventListener(view.bind(null, 0));
-  document.getElementById('two').addEventListener(view.bind(null, 1));
+  document.getElementById('one').addEventListener('click', function() {
+    view(0);
+  });
+  document.getElementById('two').addEventListener('click', function() {
+    view(1);
+  });
 });
 
 function getCameraIds() {
