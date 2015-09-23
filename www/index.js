@@ -37,8 +37,8 @@ function view(idx) {
       }
     }, function(stream) {
       vid.srcObject = stream;
-      //vid.load();
-      //vid.play();
+      vid.load();
+      vid.play();
     }, function(err) {
       console.log(err);
     });
