@@ -15,14 +15,12 @@ document.addEventListener("deviceready", function() {
 function view(idx) {
   getCameraIds().then(function(cameras) {
     var source = cameras[idx];
-    console.log(source);
-    console.log(typeof source);
     navigator.getUserMedia({
       audio: true,
       video: {
-        mandatory: {
+        optional: [{
           sourceId: source
-        }
+        }]
       }
     }, function(stream) {
       vid.src = URL.createObjectURL(stream);
