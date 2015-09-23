@@ -2,6 +2,9 @@ var vid = document.getElementById('video');
 vid.muted = true;
 
 document.addEventListener("deviceready", function() {
+  window.shouldRotateToOrientation = function(degrees) {
+    return true;
+  };
   cordova.plugins.iosrtc.debug.enable('iosrtc*');
   cordova.plugins.iosrtc.registerGlobals();
   document.getElementById('one').addEventListener('click', function() {
