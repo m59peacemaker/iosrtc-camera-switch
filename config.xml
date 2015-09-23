@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.uhh" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>iosrtcCameraSwitch</name>
+    <description>
+        Stuff.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <platform name="ios">
+      <hook type="after_platform_add" src="hooks/iosrtc-swift-support.js" />
+    </platform>
+    <engine name="ios" spec="^3.8.0" />
+    <plugin name="cordova-plugin-iosrtc" spec="1.4.5" />
+    <plugin name="cordova-plugin-device" spec="1.0.1" />
+    <plugin name="cordova-plugin-statusbar" spec="1.0.1" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+</widget>
